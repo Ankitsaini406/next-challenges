@@ -10,8 +10,10 @@
 
 body {
     box-sizing: border-box;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    /* background-color: var(--bg-color);
+    color: var(--text-color); */
+    background-color: black;
+    color: white;
 }
 
 h1,

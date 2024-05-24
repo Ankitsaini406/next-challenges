@@ -1,0 +1,30 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sub-nav {
+    display: flex;
+    gap: 4rem;
+}
+
+.button-box {
+    /* background-color: var(--text-color);
+    color: var(--bg-color); */
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+}
+
+.active{
+    background-color: black;
+    color: white;
+}
+
+.sun-light {
+    height: 1rem;
+    aspect-ratio: 1/1;
+    border-radius: 25px;
+    border: 1px solid ;
+    position: relative;
+}

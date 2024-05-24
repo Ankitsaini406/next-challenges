@@ -11,6 +11,13 @@ export const SolerSystem = () => {
     },
   ]);
 
+  const [sunPostion, setSunPostion] = useState([{
+    top : 0,
+    left: 0,
+  },])
+
+  const [showSun, setShowSun] = useState(false);
+
   useEffect(() => {
     const numStars = 1000;
     const generateStars = () => {
@@ -23,15 +30,27 @@ export const SolerSystem = () => {
     };
 
     generateStars();
+
+    const suntop = Math.random() * 50;
+    const sunleft = Math.random() * 50 ;
+
+    setSunPostion([{top: suntop, left:sunleft}])
+    setShowSun(true)
   }, []);
 
   return (
     <div className="soler-box">
-        <div className="sun-box">
+        {/* <div className="sun-box">
       <div className="sun-details">
-      </div>
-        <div className="sun"></div>
-        </div>
+      </div> */}
+      
+      {
+        sunPostion.map((sun, index) => (
+            showSun ?  <div className="sun" key={index} style={{ top: `${sun.top}%`, left: `${sun.left}%` }}></div> : null
+        ))
+      }
+        
+        {/* </div> */}
       {/* <div className="pulto-circle">
         <div className="circle-p">
           <div className="pulto"></div>
@@ -43,11 +62,12 @@ export const SolerSystem = () => {
         </div>
       </div> */}
       {stars.map((star) => (
+        showSun ?
         <div
           className="star"
           key={star.id}
           style={{ top: `${star.top}%`, left: `${star.left}%` }}
-        ></div>
+        ></div> : null
       ))}
     </div>
   );

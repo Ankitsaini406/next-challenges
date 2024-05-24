@@ -1,0 +1,35 @@
+[data-theme="light"] {
+    --bg-color: #fff;
+    --text-color: #333;
+}
+
+[data-theme="dark"] {
+    --bg-color: #333;
+    --text-color: #fff;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+ul,
+button {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}

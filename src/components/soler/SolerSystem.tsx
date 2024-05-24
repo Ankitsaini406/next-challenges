@@ -31,8 +31,8 @@ export const SolerSystem = () => {
 
     generateStars();
 
-    const suntop = Math.random() * 50;
-    const sunleft = Math.random() * 50 ;
+    const suntop = Math.random() * 90;
+    const sunleft = Math.random() * 90 ;
 
     setSunPostion([{top: suntop, left:sunleft}])
     setShowSun(true)

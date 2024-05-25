@@ -1,11 +1,11 @@
-import '@/src/components/navbar/navbar.css'
+import style from'./navbar.module.css'
 import Links from "./Links";
 
 const Navbar = () => {
     return (
-        <div className="nav-bar">
+        <div className={style.navbar}>
             <h1>Logo</h1>
-            <div className="sub-nav">
+            <div className={style.subnav}>
                 <Links />
             </div>
         </div>

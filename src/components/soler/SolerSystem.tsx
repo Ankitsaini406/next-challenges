@@ -40,6 +40,7 @@ export const SolerSystem = () => {
 
   return (
     <div className="soler-box">
+      <div className="night"><div className="falling-star"></div></div>
         {/* <div className="sun-box">
       <div className="sun-details">
       </div> */}

@@ -1,0 +1,17 @@
+.loginContainer {
+    margin: 4rem auto;
+    width: fit-content;
+    background-color: #393E46;
+    color: #EEEEEE;
+    padding: 2rem;
+
+    & h2 {
+        font-weight: bold;
+        line-height: 2rem;
+        text-transform: uppercase;
+    }
+}
+
+.passWord {
+    width: 20rem;
+}

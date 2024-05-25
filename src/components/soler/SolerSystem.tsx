@@ -62,6 +62,7 @@ export const SolerSystem = () => {
           <div className="earth"></div>
         </div>
       </div> */}
+      <div className="changeShap"></div>
       {stars.map((star) => (
         showSun ?
         <div

@@ -133,7 +133,7 @@
     }
 }
 
-.night{
+.night {
     position: absolute;
     top: 20%;
     left: 40%;
@@ -175,29 +175,61 @@
     }
 }
 
-.falling-star::before,.falling-star::after  {
+.falling-star::before,
+.falling-star::after {
     position: absolute;
     content: "";
     top: calc(50% - 3px);
     right: 0;
     height: 0.3rem;
-    background: linear-gradient(-45deg, rgba(0,0,255,0), #fff, rgba(0,0,255,0));
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #fff, rgba(0, 0, 255, 0));
     border-radius: 100%;
     transform: translateX(50%) rotateZ(45deg);
     animation: shining 3s ease-in-out infinite;
 }
 
 @keyframes shining {
-    0%{
+    0% {
         width: 0;
     }
+
     50% {
         width: 3rem;
     }
-    100%{
+
+    100% {
         width: 0;
     }
 }
-.falling-star::after{
+
+.falling-star::after {
     transform: translateX(50%) rotateZ(-45deg);
+}
+
+.changeShap {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid red;
+    height: 10rem;
+    aspect-ratio: 1/1;
+    box-shadow: 0px 0px 20px 20px white;
+    animation: shap 10s ease-in-out infinite;
+}
+
+@keyframes shap {
+    0%,100% {
+        clip-path: inset(0 0 0 0);
+    }
+    15% {
+        clip-path: inset(25% 0 0 0);
+    }
+    40% {
+        clip-path: inset(0 0 0 25%);
+    }
+    60% {
+        clip-path: inset(0 0 25% 0);
+    }
+    80% {
+        clip-path: inset(0 25% 0 0);
+    }
 }

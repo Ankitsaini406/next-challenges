@@ -1,8 +1,6 @@
-"use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import style from "./navbar.module.css";
+import NavLinks from "./NavLinks";
 
 const Links = () => {
   const links = [
@@ -24,23 +22,22 @@ const Links = () => {
     },
   ];
 
-  const pathName = usePathname();
+  const session = false;
+  const isAdmin = false;
 
   return (
     <>
       {links.map((link) => {
-        return (
-          <Link
-            className={`${style.navLink} ${
-              pathName === link.path && style.active
-            }`}
-            key={link.title}
-            href={link.path}
-          >
-            {link.title}
-          </Link>
-        );
+        return <NavLinks key={link.title} items={link} />;
       })}
+      {session ? (
+        <>
+          {isAdmin && <NavLinks items={{ title: "Admin", path: "/admin" }} />}
+          <button className={style.logutBtn}>Logout</button>
+        </>
+      ) : (
+        <NavLinks items={{ title: "Login", path: "/login" }} />
+      )}
     </>
   );
 };

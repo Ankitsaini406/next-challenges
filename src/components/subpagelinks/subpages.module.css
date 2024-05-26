@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+    height: 100vh;
+}
+
+.subbutton{
+    padding: 1rem;
+    border: 1px solid white;
+    height: 2rem;
+}

@@ -10,11 +10,16 @@
 
 body {
     box-sizing: border-box;
+    scroll-behavior:smooth;
     /* background-color: var(--bg-color);
     color: var(--text-color); */
     background-color: black;
     color: white;
 }
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
 
 h1,
 h2,
@@ -27,11 +32,11 @@ a,
 li,
 ul,
 button {
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
